@@ -1,0 +1,231 @@
+:root {
+    --white-text-color: #fff;
+    --pink: #ff6565;
+    --black-text-color: #071629;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Source Sans Pro";
+    color: var(--white-text-color);
+    overflow-x: hidden;
+  }
+  header {
+    padding-top: 1px;
+    background: url(./Images/headphones_hero_1.jpg) no-repeat;
+    background-size: cover;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 150px;
+    margin-top: 27px;
+    margin-bottom: 300px;
+  }
+  
+  nav .bx {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .action-callDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 300px 0px;
+    min-width: 40%;
+  }
+  
+  button {
+    background-color: #ff6565;
+    border: none;
+    border-radius: 22px;
+    margin: 40px auto;
+    padding: 11px 13px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white-text-color);
+  }
+  .action-callDiv h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .action-callDiv h5 {
+    font-weight: 600;
+    font-size: 16px;
+    font-style: normal;
+  }
+  .action-callDiv p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 26px;
+    padding-bottom: 90px;
+  }
+  .what-we-do {
+    color: var(--black-text-color);
+    padding: 1px 0;
+  }
+  
+  .what-we-do article {
+    width: 637px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .what-we-do article h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .what-we-do article p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .illustrations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+    gap: 61px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  .illustrations h5 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  .illustrations p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  
+  section:nth-of-type(2) {
+    background: url(./Images/headphones_hero_2.jpg) no-repeat;
+    background-size: cover;
+    color: var(--white-text-color);
+  }
+  .pentagon {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color:var(--pink);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+  .pentagon h1 {
+    position: absolute;
+    left: 30%;
+    bottom: 60px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+  .pentagon p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 26px;
+    position: absolute;
+    left: 20%;
+    bottom: 20px;
+  }
+  @media screen and (max-width: 1024px) {
+    nav {
+      margin: 27px 60px 0 60px;
+      width: 80%;
+    }
+    .action-callDiv {
+      margin: 100px 50px 0px 50px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    nav {
+      margin: 27px 60px 0 60px;
+      width: 90%;
+    }
+    nav ul {
+      gap: 10px;
+    }
+    .illustrations {
+      grid-template-columns: repeat(2, 1fr);
+      width: 400px;
+    }
+    .what-we-do article {
+      width: 350px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    header {
+      width: 100%;
+      margin: 0;
+    }
+    nav {
+      margin: 0;
+      margin-top: 20px;
+      position: relative;
+    }
+    nav img {
+      width: 70%;
+      margin: 0 auto;
+    }
+    nav ul {
+      display: none;
+    }
+    nav ul li {
+      padding: 5px 0;
+    }
+    nav .bx {
+      display: inline;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    nav .bx:active ~ ul {
+      display: flex;
+      flex-direction: column-reverse;
+      position: absolute;
+      left: 50%;
+      top: 50px;
+    }
+    .action-callDiv {
+      min-width: none;
+    }
+    .what-we-do article {
+      width: 80%;
+    }
+    .illustrations {
+      width: 325px;
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+    .pentagon {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .pentagon h1 {
+      font-size: 46px;
+      left: 25%;
+      bottom: 80px;
+    }
+    .pentagon p {
+      left: 20%;
+      bottom: 30px;
+    }
+  }
